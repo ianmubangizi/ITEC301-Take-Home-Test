@@ -1,7 +1,8 @@
 
 const getValue = (html) => html.value
-const isEmpty = (value) => value === ""
 const getById = (id) => document.getElementById(id)
+
+const isEmpty = (value) => value === ""
 const isMatch = (value, regex = /.../) => regex.test(value)
 const isError = (error = "", b = false, cb)=> b ? cb(error) : null 
 
