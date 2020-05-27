@@ -69,7 +69,7 @@
         <p>A place for meat lovers</p>
         <div class="border-box">
             <h4 id="form-title">Contact Form</h4>
-            <form onsubmit="return false">
+            <form onsubmit="return validiteContactForm(this)">
                 <label for="name">Name</label>
                 <input id="name_input" name="name" type="text" placeholder="Your name...">
                 <label for="email">Email</label>
@@ -88,6 +88,7 @@
             </form>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
