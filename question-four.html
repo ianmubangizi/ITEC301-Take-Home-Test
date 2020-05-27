@@ -46,7 +46,7 @@
 
     <script>
         const getById = (id = "") => document.getElementById(id)
-        const calculate = (x = 0) => getById("square_root_value").value = x > 0 ? Math.sqrt(x) : `Invaild: can't √${x}`
+        const calculate = (x = 0) => getById("square_root_value").value = x >= 0 ? Math.sqrt(x) : `Invaild: can't √${x}`
     </script>
 </body>
 
