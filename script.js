@@ -48,8 +48,8 @@ const validiteContactForm = (form) => {
 const validateFields = (fields, index) => {
     if(index >= 0) {
         let field = fields[index]
-        let name = field.name
-        let value = getValue(field)
+        let {name, value} = field
+        // let value = getValue(field)
         const {empty, match} = validation[name]
         if(match){
             const { regex, regEx } = match
