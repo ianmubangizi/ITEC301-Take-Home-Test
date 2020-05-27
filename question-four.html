@@ -7,8 +7,10 @@
     <title>Document</title>
     <style>
         table {
-            margin: 10px auto; text-align: end;
+            margin: 10px auto;
+            text-align: end;
         }
+
         .border-box {
             text-align: center;
             border: 1px solid black;
@@ -29,14 +31,23 @@
             </tr>
             <tr>
                 <td></td>
-                <td><button style="width: 100%;">Calculate</button></td>
+                <td>
+                    <button style="width: 100%;" onclick='calculate(getById("value_input").value)'>
+                        Calculate
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td><label for="square_root_value">The Square root value is:</label></td>
-                <td><input id="square_root_value" name="square_root_value" type="number" disabled></td>
+                <td><input id="square_root_value" name="square_root_value" type="text" disabled></td>
             </tr>
         </table>
     </div>
+
+    <script>
+        const getById = (id = "") => document.getElementById(id)
+        const calculate = (x = 0) => getById("square_root_value").value = x > 0 ? Math.sqrt(x) : `Invaild: can't √${x}`
+    </script>
 </body>
 
 </html>
