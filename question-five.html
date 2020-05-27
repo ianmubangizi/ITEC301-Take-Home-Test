@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: grid;
+            grid-gap: 5px;
+            margin: 20px 0px;
+            text-align: start;
+        }
+
+        /* Source: https://www.w3schools.com/css/css_grid.asp */
+
+        label {
+            margin-top: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 8px;
+            border-radius: 3px;
+            border: 1px solid gray;
+            box-shadow: 0px 0px 0px 2px rgba(180, 180, 180, 0.2);
+        }
+
+        /* Source: https://www.w3schools.com/CSSref/css3_pr_box-shadow.asp */
+
+        .border-box {
+            max-width: 480px;
+            margin: 30px auto;
+            padding: 0px 10px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        .center-box {
+            margin: auto;
+            max-width: 500px;
+        }
+
+        #form-title {
+            position: absolute;
+            background-color: white;
+            margin-top: -10px;
+        }
+
+        #submit_button {
+            color: white;
+            margin-top: 10px;
+            background-color: rgb(20, 120, 30);
+        }
+
+        #message_textarea {
+            min-width: 460px;
+            max-width: 460px;
+            min-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center-box">
+        <h1>Meat Brothers Butchery</h1>
+        <p>A place for meat lovers</p>
+        <div class="border-box">
+            <h4 id="form-title">Contact Form</h4>
+            <form onsubmit="return false">
+                <label for="name">Name</label>
+                <input id="name_input" name="name" type="text" placeholder="Your name...">
+                <label for="email">Email</label>
+                <input id="email_input" name="email" type="text" placeholder="Your Email...">
+                <label for="country">Country</label>
+                <select id="country_selection" name="country">
+                    <option value="" selected disabled hidden>Select</option>
+                    <!-- Source: https://stackoverflow.com/questions/3518002/how-can-i-set-the-default-value-for-an-html-select-element -->
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Africa">UK</option>
+                    <option value="South Africa">USA</option>
+                </select>
+                <label for="message">Message</label>
+                <textarea id="message_textarea" name="message" placeholder="Your message"></textarea>
+                <input id="submit_button" name="submit" type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
