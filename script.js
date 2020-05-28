@@ -48,12 +48,12 @@ const validiteContactForm = (form) => {
 const validateFields = (fields, index) => {
     if(index >= 0) {
         let field = fields[index]
-        let {name, value} = field
+        const {name, value} = field
         const {empty, match} = validation[name]
         if(match){
             const { regex, regEx } = match
-            let vaild = regex.check(value, regEx)
-            regex.error(`The ${name} ${value} is not a vaild ${name}`, !vaild, (error) => {
+            let valid = regex.check(value, regEx)
+            regex.error(`The ${name} ${value} is not a valid ${name}`, !valid, (error) => {
                 validation.errors.push(error)
             })
         }
