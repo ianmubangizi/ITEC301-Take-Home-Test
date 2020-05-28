@@ -63,6 +63,5 @@ const validateFields = (fields, index) => {
         validation.values.push(value)
         validateFields(fields, --index)
     }
-    result = validation.errors.length <= 0 ? validation.values : validation.errors
-    return result
+    return validation.errors.length <= 0 ? validation.values : validation.errors
 }
