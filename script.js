@@ -25,24 +25,23 @@ const validation = {
     values: [] 
 }
 
-const validiteContactForm = (form) => {
-    fields = [form.name, form.email, form.country, form.message]
+const validiteContactForm = ({name, email, country, message}) => {
     validation.errors = []
     validation.values = []
-    result = validateFields(fields, fields.length - 1)
-    onErrors = validation.errors.length <= 0 
-    if(onErrors) {
-        message = `
+    fields = [name, email, country, message]
+    validateFields(fields, fields.length - 1)
+    noErrors = validation.errors.length <= 0 
+    if(noErrors) {
+        text = `
         You've entered the following details:
-        Full name: ${getValue(form.name)}
-        Email Address: ${getValue(form.email)}
-        Country: ${getValue(form.country)}
-        Message: ${getValue(form.message)}
+        Full name: ${getValue(name)}
+        Email Address: ${getValue(email)}
+        Country: ${getValue(country)}
+        Message: ${getValue(message)}
         `
-        alert(message)
+        alert(text)
     }
-    console.log(result)
-    return onErrors
+    return noErrors
 }
 
 const validateFields = (fields, index) => {
